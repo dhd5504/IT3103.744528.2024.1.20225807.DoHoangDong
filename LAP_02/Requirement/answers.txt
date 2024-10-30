@@ -1,0 +1,21 @@
+1. Ưu điểm của Getter và Setter
+Đóng gói (Encapsulation)
+Kiểm soát dữ liệu (Data Control)
+Dễ dàng bảo trì
+Khả năng mở rộng
+Dễ dàng debug
+2. Nhược điểm của Getter và Setter
+Tăng độ phức tạp mã nguồn
+Không cần thiết cho thuộc tính chỉ sử dụng trong nội bộ
+Phá vỡ nguyên tắc thiết kế
+Hiệu năng
+3. Thời điểm nên sử dụng Getter và Setter
+Khi cần bảo vệ dữ liệu
+Khi thuộc tính cần được truy cập từ bên ngoài lớp
+Khi cần linh hoạt trong tương lai
+Khi áp dụng các khuôn mẫu thiết kế yêu cầu getter và setter
+4. Thời điểm không nên sử dụng Getter và Setter
+Khi thuộc tính chỉ sử dụng trong nội bộ lớp
+Khi getter và setter không có thêm logic xử lý nào
+Khi cần giữ sự bảo mật tuyệt đối cho dữ liệu
+Khi vi phạm nguyên tắc thiết kế
