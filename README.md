@@ -1,2 +1,2 @@
-+ Thực hiện trên NetBeansProjects 
-Gộp lab 2,3
++ Thực hiện trên NetBeansProjects
++ Gộp lab 2,3
