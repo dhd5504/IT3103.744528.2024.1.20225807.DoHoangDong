@@ -1,6 +1,8 @@
 package src.hust.soict.hedspi.aims.media;
 // Do Hoang Dong 20225807
+
 import java.util.*;
+
 public abstract class Media {
 
     private int id;
@@ -9,12 +11,9 @@ public abstract class Media {
     private float cost;
 
     public static final Comparator<Media> COMPARE_BY_TITLE_COST = new MediaComparatorByTitleCost();
-    
+
     public static final Comparator<Media> COMPARE_BY_COST_TITLE = new MediaComparatorByCostTitle();
-    
 
-
-   
     public Media(int id, String title, String category, float cost) {
         this.id = id;
         this.title = title;
@@ -22,19 +21,25 @@ public abstract class Media {
         this.cost = cost;
     }
 
-
-    public int getId() { return id; }
-
-    public String getTitle() { return title; }
-
-    public String getCategory() { return category; }
-
-    public float getCost() { return cost; }
-
-    boolean equals(Media o2) { 
-        return title.equals(o2.getTitle()); 
+    public int getId() {
+        return id;
     }
 
+    public String getTitle() {
+        return title;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public float getCost() {
+        return cost;
+    }
+
+    boolean equals(Media o2) {
+        return title.equals(o2.getTitle());
+    }
 
     public void setTitle(String title) {
         this.title = title;
@@ -50,15 +55,11 @@ public abstract class Media {
 
     @Override
     public String toString() {
-        return this.getClass().getSimpleName() +
-                " [id= " + id +
-                ", title='" + title + '\'' +
-                ", category='" + category + '\'' +
-                ", cost= " + cost + " $]";
+        return this.getClass().getSimpleName()
+                + " [id= " + id
+                + ", title='" + title + '\''
+                + ", category='" + category + '\''
+                + ", cost= " + cost + " $]";
     }
 
-    
 }
-
-
-

@@ -1,10 +1,11 @@
 package src.hust.soict.hedspi.aims.media;
 // Do Hoang Dong 20225807
 
-
 import java.util.ArrayList;
 import java.util.List;
-public class Book extends Media{
+
+public class Book extends Media {
+
     private List<String> authors = new ArrayList<String>();
 
     public Book(int id, String title, String category, float cost, List<String> authors) {
@@ -15,14 +16,20 @@ public class Book extends Media{
     public Book(int id, String title, String category, float cost) {
         super(id, title, category, cost);
     }
+    public Book( String title, String category, float cost) {
+        super(1, title, category, cost);
+    }
+    
+    public List<String> getAuthors() {
+        return authors;
+    }
 
-    public List<String> getAuthors() { return authors; }
-
-    public void setAuthors(List<String> authors) { this.authors = authors; }
-
+    public void setAuthors(List<String> authors) {
+        this.authors = authors;
+    }
 
     public void addAuthor(String authorName) {
-        if(authors.contains(authorName)) {
+        if (authors.contains(authorName)) {
             System.out.println(authorName + "is already in the list !");
         } else {
             authors.add(authorName);
@@ -30,7 +37,7 @@ public class Book extends Media{
     }
 
     public void removeAuthor(String authorName) {
-        if(authors.contains(authorName)) {
+        if (authors.contains(authorName)) {
             authors.remove(authorName);
         } else {
             System.out.println(authorName + "is not in the list !");
@@ -39,12 +46,12 @@ public class Book extends Media{
 
     @Override
     public String toString() {
-        StringBuilder print = new StringBuilder("Book: " +
-                " [id=" + getId() +
-                ", title='" + getTitle() + '\'' +
-                ", category='" + getCategory() + '\'' +
-                ", authors: ");
-        for(String a : authors) {
+        StringBuilder print = new StringBuilder("Book: "
+                + " [id=" + getId()
+                + ", title='" + getTitle() + '\''
+                + ", category='" + getCategory() + '\''
+                + ", authors: ");
+        for (String a : authors) {
             print.append(a);
             print.append(" ");
         }
@@ -53,10 +60,9 @@ public class Book extends Media{
         print.append("$]");
         return print.toString();
     }
+
+    public Book() {
+        super(0, null, null, 0);
+    }
+    
 }
-
-
-
-
-
-

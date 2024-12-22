@@ -1,6 +1,8 @@
 package src.hust.soict.hedspi.aims.media;
 // Do Hoang Dong 20225807
-public class Disc extends Media{
+
+public class Disc extends Media {
+
     private String director;
     private float length;
 
@@ -14,21 +16,24 @@ public class Disc extends Media{
         super(id, title, category, cost);
     }
 
+    public String getDirector() {
+        return director;
+    }
 
-    
-    public String getDirector() { return director; }
-
-    public float getLength() { return length; }
+    public float getLength() {
+        return length;
+    }
 
     public void setLength(float length) {
         this.length = length;
     }
+
     public String toString() {
-        return "DVD: " +
-                " [id = "  + getId() +
-                ", title = '" + getTitle() + '\'' +
-                ", category = '" + getCategory() + '\'' +
-                ", director: " + getDirector() +
-                ", length = " + getLength() + ", cost= " + getCost() + "$]";
+        return "DVD: "
+                + " [id = " + getId()
+                + ", title = '" + getTitle() + '\''
+                + ", category = '" + getCategory() + '\''
+                + ", director: " + getDirector()
+                + ", length = " + getLength() + ", cost= " + getCost() + "$]";
     }
 }
